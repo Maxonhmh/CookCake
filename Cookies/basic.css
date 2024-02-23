@@ -1,0 +1,200 @@
+
+/* Ваши стили здесь */
+body {
+  background-color: rgb(200, 200, 200);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+
+
+  margin: 0px;
+  height: 1000px;
+  padding: 0px;
+}
+header{
+
+}
+footer{
+
+  height: 10%;
+
+}
+
+.Upper_slider{
+  margin-top: 10%;
+  height: 250px;
+  width: 100%;
+  background-color: aqua;
+}
+
+.Header_Grid{
+ display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 10px;
+  height: 50px;
+
+
+}
+
+.Sing_In_window{
+  text-align: left;
+  margin-left: 2.5%;
+}
+
+.Registration_window{
+  text-align: right; 
+  margin-right: 2.5%;
+}
+
+.Header_Oval{
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  top: -50px;
+  height: 100px;
+  width: 100%;
+  background-color: #e59de5;
+  border-radius: 10% 10% 60% 60%;
+}
+
+.triangle_bottom{
+  height: 150px; 
+  width: 100%; 
+
+  background: #b975b0;
+  clip-path: polygon(50% 0, 100% 50%, 100% 100%, 0 100%, 0 50%);
+
+}
+
+.Main_Grid_Container{
+  margin-top: 1100px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 10px;
+  height: 50px;
+
+}
+
+.item_Grid{
+  width: 200px;
+  height: 200px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.items {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  user-select: none;
+}
+
+.items .item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: all 300ms ease-in-out;
+  z-index: -1;
+  opacity: 0;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item.active {
+  opacity: 1;
+  z-index: 99;
+  box-shadow: 0px 0px 105px -35px rgba(0, 0, 0, 0.75);
+}
+
+.item.prev {
+  z-index: 2;
+  opacity: 0.25;
+  transform: translate(-125%, -50%);
+}
+
+.item.next {
+  z-index: 2;
+  opacity: 0.25;
+  transform: translate(25%, -50%);
+}
+
+.items .button-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 275px;
+  z-index: 100;
+}
+
+.button-container .button {
+  color: #fff;
+  font-size: 32px;
+  cursor: pointer;
+  position: relative;
+  opacity: 0.75;
+  transition: all 300ms ease-in-out;
+}
+
+.button-container .button:hover {
+  opacity: 1;
+}
+
+.button-container .button:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 1);
+  border-radius: 50%;
+  z-index: -99;
+}
+
+.button-container .button:nth-child(1) {
+  float: left;
+}
+
+.button-container .button:nth-child(2) {
+  float: right;
+}
